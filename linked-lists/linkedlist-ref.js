@@ -1,80 +1,126 @@
-//https://github.com/benoitvallon/computer-science-in-javascript/blob/master/data-structures-in-javascript/singly-linked-list.js
-function Node(data) {
-  this.data = data;
-  this.next = null;
+//https://github.com/nzakas/computer-science-in-javascript/blob/master/data-structures/linked-list/linked-list.js
+
+function LinkedList() {
+
+
+    //The number of items in the list.
+    this._length = 0;
+    
+    //Pointer to first item in the list.
+    this._head = null;
 }
 
-function SinglyLinkedList() {
-  this.head = null;
-  this.tail = null;
-  this.numberOfValues = 0;
-}
+LinkedList.prototype = {
 
-SinglyLinkedList.prototype.add = function(data) {
-  var node = new Node(data);
-  if(!this.head) {
-    this.head = node;
-    this.tail = node;
-  } else {
-    this.tail.next = node;
-    this.tail = node;
-  }
-  this.numberOfValues++;
-};
-SinglyLinkedList.prototype.remove = function(data) {
-  var previous = this.head;
-  var current = this.head;
-  while(current) {
-    if(current.data === data) {
-      if(current === this.head) {
-        this.head = this.head.next;
-      }
-      if(current === this.tail) {
-        this.tail = previous;
-      }
-      previous.next = current.next;
-      this.numberOfValues--;
-    } else {
-      previous = current;
+    //restore constructor
+    constructor: LinkedList,
+
+    //Appends some data to the end of the list. This method traverses
+    //the existing list and places the value at the end in a new item.
+    add: function (data){
+    
+        //create a new item object, place data in
+        var node = {
+                data: data,
+                next: null
+            },
+            
+            //used to traverse the structure
+            current;
+    
+        //special case: no items in the list yet
+        if (this._head === null){
+            this._head = node;
+        } else {
+            current = this._head;
+            
+            while(current.next){
+                current = current.next;
+            }
+           
+            current.next = node;
+        }
+        
+        //don't forget to update the count
+        this._length++;
+    
+    },
+    
+    //Retrieves the data in the given position in the list.
+    item: function(index){
+    
+        //check for out-of-bounds values
+        if (index > -1 && index < this._length){
+            var current = this._head,
+                i = 0;
+                
+            while(i++ < index){
+                current = current.next;
+            }
+        
+            return current.data;
+        } else {
+            return null;
+        }
+    },
+    
+    //Removes the item from the given location in the list.
+    remove: function(index){
+    
+        //check for out-of-bounds values
+        if (index > -1 && index < this._length){
+        
+            var current = this._head,
+                previous,
+                i = 0;
+                
+            //special case: removing first item
+            if (index === 0){
+                this._head = current.next;
+            } else {
+        
+                //find the right location
+                while(i++ < index){
+                    previous = current;
+                    current = current.next;            
+                }
+            
+                //skip over the item to remove
+                previous.next = current.next;
+            }
+        
+            //decrement the length
+            this._length--;
+        
+            //return the value
+            return current.data;
+        
+        } else {
+            return null;
+        }
+    
+    },
+    
+    //Returns the number of items in the list.
+    size: function(){
+        return this._length;
+    },
+    
+    //Converts the list into an array.
+    toArray: function(){
+        var result = [],
+            current = this._head;
+        
+        while(current){
+            result.push(current.data);
+            current = current.next;
+        }
+        
+        return result;
+    },
+    
+    //Converts the list into a string representation.
+    toString: function(){
+        return this.toArray().toString();
     }
-    current = current.next;
-  }
-};
-SinglyLinkedList.prototype.insertAfter = function(data, toNodeData) {
-  var current = this.head;
-  while(current) {
-    if(current.data === toNodeData) {
-      var node = new Node(data);
-      if(current === this.tail) {
-        this.tail.next = node;
-        this.tail = node;
-      } else {
-        node.next = current.next;
-        current.next = node;
-      }
-      this.numberOfValues++;
-    }
-    current = current.next;
-  }
-};
-SinglyLinkedList.prototype.traverse = function(fn) {
-  var current = this.head;
-  while(current) {
-    if(fn) {
-      fn(current);
-    }
-    current = current.next;
-  }
-};
-SinglyLinkedList.prototype.length = function() {
-  return this.numberOfValues;
-};
-SinglyLinkedList.prototype.print = function() {
-  var string = '';
-  var current = this.head;
-  while(current) {
-    string += current.data + ' ';
-    current = current.next;
-  }
-  console.log(string.trim());
 };
