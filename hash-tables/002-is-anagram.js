@@ -1,15 +1,12 @@
-/* 
+/*
 source: glassdoor
 problem statement:
-given a string, write a progra that counts word frequency
+given a string, determine if it is an anagram
 
-input - string
-output - hash table (asssociative array)
+input - two strings
+output - boolean
 
-running time - O(n)
-
-notes: there is a bug with certain input strings
-error - this._resize(this._limit / 2); where TypeError: this._resize is not a function in the  at HashTable.remove function
+running time - 
 
 */
 
@@ -123,34 +120,33 @@ HashTable.prototype.retrieveAll = function() {
   console.log(this._storage);
 };
 
-
 /** SOLUTION **/
-let str = 'this is great this and everything is lovely';
+let str1 = "wolfgang amadeus mozart";
+let str2 = "a famous german waltz god";
 
-function countWordFreq(str) {
-  let strArr = str.split(' ');
+function isAnagram(str1, str2){
+
+  let strArr1 = str1.split("");
+  let strArr2 = str2.split("");
 
   let hashTable = new HashTable();
-  let count = 1;
 
-
-  for (let i = 0; i < strArr.length; i++) {
-    //if word is found, increment count
-    //do we have to remove and reinsert in order to increment count
-    //can we change the implementation to avoid this or is it not that expensive an operation
-    if(hashTable.retrieve(strArr[i])){
-      let tempCount = hashTable.retrieve(strArr[i]);
-      hashTable.remove(strArr[i]);
-      hashTable.insert(strArr[i], tempCount + 1);
-
-    //if word is not found, insert word into hash table
+  for(let i = 0; i < strArr1.length; i++){
+    if(strArr1[i] === " "){
     } else {
-      hashTable.insert(strArr[i], count);
+       hashTable.insert(strArr1[i], "value");
     }
-  
   }
 
-  hashTable.retrieveAll();
+  for(let j = 0; j < strArr2.length; j++){
+    if(strArr2[j] === " "){
+    } else if (!hashTable.retrieve(strArr2[j])) {
+      console.log(strArr2[j]);
+      return false;
+    }
+  }
+
+  return true;
 }
 
-console.log(countWordFreq(str))
+console.log(isAnagram(str1, str2));
