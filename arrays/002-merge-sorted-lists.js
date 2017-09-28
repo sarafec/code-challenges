@@ -17,7 +17,7 @@ function mergeArrays(arr1, arr2) {
 	let count2 = 0;
 	let sortedArr = [];
 
-	while(count1 < arr1.length && count2 < arr2.length){
+	while (count1 < arr1.length && count2 < arr2.length) {
 		if (arr1[count1] < arr2[count2]) {
 			sortedArr.push(arr1[count1]);
 			count1++;
@@ -27,7 +27,14 @@ function mergeArrays(arr1, arr2) {
 		}
 	}
 
-	//add functionality for appending the rest of the values to sortedArr
+	while (count1 < arr1.length) {
+		sortedArr.push(arr1[count1++]);
+	}
+
+	while (count2 < arr2.length) {
+		sortedArr.push(arr2[count2++]);
+	}
+
 	return sortedArr;
 }
 
