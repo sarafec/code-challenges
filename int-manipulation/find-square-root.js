@@ -1,12 +1,16 @@
 /*
 source: mock interview - 9/16/2017
+
 problem statement:
 Given an integer input, return its closest whole number square root
 
-input - int
-output - int
-
 running time: O(log n)
+
+work left to do:
+1 - write explaination
+2 - write iteratively
+3 - test
+
 */
 
 //define initial input values

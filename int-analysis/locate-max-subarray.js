@@ -1,12 +1,14 @@
 /*
-source: LeetCode
+
 problem statement:
 Find the contiguous subarray within an array which has the largest sum.
 
-edge cases: empty array, check array with one value
-test cases, small:
-test cases, large:
 running time: O(n)
+
+work left to do:
+1 - write explaination
+2 - test
+
 */
 
 let inputArr = [20, -30, 50, 150, -50, 25];

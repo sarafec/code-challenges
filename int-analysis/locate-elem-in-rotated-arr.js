@@ -1,14 +1,15 @@
 /*
-source: Kal Academy A.3
-problem statement:
+
 Given a sorted array of n integers that has been rotated an unknown number of times,
 write code to find an element in the array. Assume the array was originally sorted
 in increasing order.
 
-input - array and integer
-output - integer, representing the index of the 
-
 running time - O(log n)
+
+work left to do:
+1 - write explaination
+2 - write iteratively
+3 - test
 
 */
 

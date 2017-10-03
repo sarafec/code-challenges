@@ -1,12 +1,16 @@
 /*
+
 source: Brandverity Mock Interview (9/26/17)
+
 problem statement:
 Given two sorted arrays, sort into a third array.
 
-input - two sorted arrays
-output - one sorted array
-
 running time - O(n)
+
+work left to do:
+1 - write explaination
+2 - test
+
 */
 
 let arr2 = [3,4,5,6,8];

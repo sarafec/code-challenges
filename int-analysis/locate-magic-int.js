@@ -1,14 +1,17 @@
 /*
-source: Kal Academy A.2
+
 problem staement:
 A magic index in an array 0...n-1 is defined to be an index such that A[i] = i.
 Given an array of distinct integers, write a method to find a magic index if one
 exists in the array.
 
-input - array
-output - intger representing the magic integer
-
 running time - O(log n)
+
+work left to do:
+1 - write explaination
+2 - write iteratively
+3 - test
+
 */
 
 let inputArr = [-1,-2,2,7,10,17];

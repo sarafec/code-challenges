@@ -1,12 +1,14 @@
 /*
-source: glassdoor
+
 problem statement:
 Given a string, replace a specific character in that string with another string
 
-input - string, replacement string, specific char to replace
-output - new string
-
 running time - O(n)
+
+work left to do:
+1 - write explaination
+2 - test
+
 */
 
 //define function input values

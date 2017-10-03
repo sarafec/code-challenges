@@ -1,12 +1,13 @@
 /*
-source: rosetta code
-problem statement:
-Write a general purpose function to do merge sort
 
-input - array of numbers
-output - sorted array of numbers
+sorting method: Merge Sort
 
 running time - n log n
+
+work left to do:
+1 - write explaination
+2 - test
+
 */
 
 function merge(left, right, arr) {

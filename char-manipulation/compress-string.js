@@ -1,14 +1,16 @@
 /*
-source: Kal Academy S.4
+
 problem statement: 
 Given a string, perform basic string compression using the counts of repeated characters.
 If the compressed string would not become smaller than the original string, 
 your method should return the original string.
 
-input - string
-output - string
-
 running time: O(n)
+
+work left to do:
+1 - write explaination
+2 - test
+
 */
 
 let str = "aaabbbc";

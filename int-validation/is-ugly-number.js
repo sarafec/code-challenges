@@ -1,16 +1,16 @@
 /*
-source: LeetCode
+
 problem statement:
 Write a program to check whether a given number is an ugly number. 
-Ugly numbers are positive numbers whose prime factors only include 2, 3, 5
-Note - 1 is typically treated as an ugly number
+An ugly numbers are positive numbers whose prime factors only include 2, 3, 5
+1 is typically treated as an ugly number
 
-edge cases: 1 is ugly, 0 is not ugly, negative numbers
-test cases, small: 50, 100, 35, 14
-test cases, large: 10003847, 384736, 39999999445756643839
-running time: 
+work left to do:
+1 - write explaination
+2 - approximate running time
+3 - write iteratively
+4 - test
 
-attempted iteratively: not yet!
 */
 
 let inputNum = 39999999445756643839;

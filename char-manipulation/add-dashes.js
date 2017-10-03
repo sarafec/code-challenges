@@ -1,14 +1,15 @@
 /*
-source: Glassdoor
+
 problem statement:
 concatenate two strings replacing every space or set of multiple spaces with a single dash
 
-input - two strings
-output - one string
 
 running time: O(n)
 
-note: I am choosing to insert a space between the two strings
+work left to do:
+1 - add explaination
+2 - test
+
 */
 
 let str1 = "this is absolutely great";

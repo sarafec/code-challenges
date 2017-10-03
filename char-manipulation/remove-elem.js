@@ -1,18 +1,16 @@
 /*
-source: LeetCode
+
 problem statement:
 Given an array and a value, remove all instances of that value in place and return the new length.
 You cannot use extra space for another array - must use constant memory.
 The order of elements can be changed. 
 
-edge cases: empty array
-test cases, small: [45, 44, 33, 12, 23, 12, 29, 12, 0], 12
 running time: O(n)
 
-notes: the array may contain duplicates and binary search would not be an efficient strategy. 
-imagine if the test case was [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 1
-binary search would be useless
-sequential search is the best you have in this case
+work left to do:
+1 - write explaination
+2 - test
+
 */
 
 let inputArr = [1,1,1,1,1,1,1,1,1,1,1,1,1];

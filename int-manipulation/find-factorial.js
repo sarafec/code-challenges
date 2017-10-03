@@ -1,12 +1,17 @@
 /*
 source: JavaScript: The Good Parts p. 35
+
 problem statement:
 Given a number, recursively find its factorial
 
-input - int
-output - int
 
-running time - O(n) 
+running time - O(n)
+
+work left to do:
+1 - write explaination
+2 - write iteratively
+3 - test
+
 */
 
 function factorial(i, a){

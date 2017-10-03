@@ -1,21 +1,19 @@
 /*
-source: Kal Academy S.11
-problem statement:
-Given a string reverse the characters in every word. 
 
-input - string
-output - ouput
+problem statement:
+given a string reverse the characters in every word. 
 
 running time - O(n + m), n being characters and m being words
 
-notes - can we clean up the nested loops
-		what is a lower-level implementation of a split()
+work left to do:
+1 - write explaination
+2 - test
 
 */
 
 let inputString = 'this is really fantastic';
 
-let reverseStringByWord = function(inputString){
+function reverseStringByWord(inputString){
 	//note - what is split() really doing?
 	let formatArr = inputString.split(' ');
 

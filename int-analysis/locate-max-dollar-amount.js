@@ -1,5 +1,5 @@
 /* 
-source: LeetCode
+
 problem statement: 
 You are a professional robber planning to rob houses along a street. Each house has a certain amount
 of money stashed, the only constraint stoppin gyou from robbing each of them is that adjacent houses
@@ -9,14 +9,13 @@ on the same night.
 Given a list of non-negative integers representing the amound of money of each house, determine the
 maximum amount of money you can rob tonight without alerting the police.
 
-input - array of ints
-ouput - max value - int
 
 running time: O(n)
 
-edge cases: arr.length === 0 then return 0, arr.length === 1 then return arr[0]
-test cases, small: [42, 4, 14, 20, 22, 26, 17], [1000, 250, 4, 1500, 300, 78, 39, 52]
-test cases, big:
+work left to do:
+1 - write explaination
+2 - test
+
 */
 
 let pracArr = [1000, 250, 4, 25, 300, 78, 39, 52];
