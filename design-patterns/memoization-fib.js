@@ -3,8 +3,6 @@ source: JavaScript: The Good Part p. 44
 problem statement:
 Given a number, return its fibonacci number using built in memoization functionality.
 
-input - int
-output - int
 */
 
 let fibonacci = (function() {
