@@ -2,19 +2,24 @@
 
 problem statement: 
 You are a professional robber planning to rob houses along a street. Each house has a certain amount
-of money stashed, the only constraint stoppin gyou from robbing each of them is that adjacent houses
+of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses
 have a security system connected and it will contact the polic if two adjacent houses were broken into
 on the same night.
 
 Given a list of non-negative integers representing the amound of money of each house, determine the
 maximum amount of money you can rob tonight without alerting the police.
 
+explaination:
+this problem is a dynamic programming problem, because it requires the data from the
+previous operation to make your next decision.
+To do this, you must create a temporary array (dp) that holds the current max amount
+of money. Then define entries in the dp array by finding the max between the current
+max and the value in the original array (nums).
 
 running time: O(n)
 
 work left to do:
-1 - write explaination
-2 - test
+1 - test
 
 */
 

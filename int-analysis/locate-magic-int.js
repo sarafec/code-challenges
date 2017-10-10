@@ -5,12 +5,16 @@ A magic index in an array 0...n-1 is defined to be an index such that A[i] = i.
 Given an array of distinct integers, write a method to find a magic index if one
 exists in the array.
 
+explaination:
+starting with an array of numbers, perform a binary search looking to see if the
+value at the midpoint is greater than, less than, or equal to the magic index.
+If no magic index is found, return -1.
+
 running time - O(log n)
 
 work left to do:
-1 - write explaination
-2 - write iteratively
-3 - test
+1 - write iteratively
+2 - test
 
 */
 
