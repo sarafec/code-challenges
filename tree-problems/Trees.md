@@ -1,12 +1,12 @@
 ### Kal Academy Tree Problems
 
 * In-order Traversal  
--- [Recursive Solution]()  
--- [Iterative Solution]()  
+-- [Recursive Solution](https://github.com/sarafec/code-challenges/blob/master/tree-problems/inorder-traversal-recursive.js)  
+-- [Iterative Solution](https://github.com/sarafec/code-challenges/blob/master/tree-problems/inorder-traversal-iterative.js)  
   
 * Pre-order Traversal  
--- [Recursive Solution]()  
--- [Iterative Solution]()  
+-- Recursive Solution  
+-- Iterative Solution  
   
 * Post-order Traversal  
 -- Recursive Solution  
