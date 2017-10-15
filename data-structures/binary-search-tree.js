@@ -1,7 +1,6 @@
 // adapted from nicholas zakas
 
 //work left to do
-// 1 - do inOrder function iteratively
 // 2 - add comments
 // 3 - write explainer
 
@@ -14,7 +13,7 @@ BinarySearchTree.prototype = {
 	constructor: BinarySearchTree,
 	// private methods
 	// appends data to the appropriate point in a tree
-	add: function() {
+	add: function(value) {
 		let node = {
 			value: value,
 			left: null,
@@ -64,7 +63,7 @@ BinarySearchTree.prototype = {
 			}
 		}
 		return found;
-	}, 
+	},
 
 	// removes a node with the given value from the tree
 	// ensure the binary tree is balanced
@@ -107,7 +106,7 @@ BinarySearchTree.prototype = {
 						while(replacement.right !== null) {
 							replacementParent = replacement;
 							replacement = replacement.right;
-						},
+						}
 
 						if(replacementParent !== null) {
 							replacementParent.right = replacement.left;
@@ -183,7 +182,6 @@ BinarySearchTree.prototype = {
 		return this.toArray().toString();
 	},
 
-	//write iteratively!
 	traverse: function(process) {
 		function inOrder(node) {
 			if(node) {
