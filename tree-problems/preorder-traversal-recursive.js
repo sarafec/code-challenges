@@ -1,10 +1,10 @@
 /**
- *  in-order traversal method
+ *  pre-order traversal method
  * 
  *  explaination: 
- * 		visits the left node, 
- * 		then the current node, 
- * 		then right node
+ *      visits the current node, 
+ *      then left node, 
+ *      then right node
  */
 
 function BinarySearchTree() {
@@ -73,23 +73,23 @@ BinarySearchTree.prototype.toString = function() {
 }
 
 
-/* IN-ORDER TRAVERSAL, recursive */
+/* PRE-ORDER TRAVERSAL, recursive */
 BinarySearchTree.prototype.traverse = function(process) {
-	function inOrder(node) {
-		if(node) {            
+	function preOrder(node) {
+		if(node) {
+            process.call(this, node);
+            
 			if(node.left !== null) {
-				inOrder(node.left);
-			}
-
-			process.call(this, node);			
+				preOrder(node.left);
+            }
             
 			if(node.right !== null) {
-				inOrder(node.right);
+				preOrder(node.right);
 			}
 		}
 	}
 
-	inOrder(this.root);
+	preOrder(this.root);
 }
 
 
