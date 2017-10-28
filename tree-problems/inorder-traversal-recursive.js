@@ -81,8 +81,8 @@ BinarySearchTree.prototype.traverse = function(process) {
 				inOrder(node.left);
 			}
 
-			process.call(this, node);			
-            
+			process.call(this, node);
+			
 			if(node.right !== null) {
 				inOrder(node.right);
 			}

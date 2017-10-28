@@ -1,24 +1,49 @@
-/*
+/**
+ *  in-order traversal method, iterative
+ * 
+ *  explaination: 
+ * 		in-order traversal -  visits the left node, then the current node,then right node
+ * 		we accomplish this traversal iteratively by using a stack to push
+ * 	
+ * fix it!
+ */
 
-In-order Traversal
-iterative solution
+// stack definition
+function Stack() {
+	this.dataStore = [];
+	this.top = 0;
+}
 
-explaination:
-in-order traversal means that you visit the left branch, 
-the current node and then the right branch.
+Stack.prototype.push = function(elem) {
+	this.dataStore[this.top++] = elem;
+}
 
-for this example, we will use a binary search tree and a stack.
+Stack.prototype.peek = function() {
+	return this.dataStore[this.top - 1];
+}
 
-RESULTS NOT CONSISTENT -- fix inOrder traversal function
-*/
+Stack.prototype.pop = function() {
+	return this.dataStore[this.top--];
+}
 
-/** Binary Search Tree Methods **/
+Stack.prototype.clear = function() {
+	this.top = 0;
+	this.dataStore.length = 0;
+}
+
+Stack.prototype.length = function() {
+	return this.top;
+}
+
 function BinarySearchTree() {
 	// pointer to root node in tree
 	this.root = null;
 }
 
+// inserts node into the bst
 BinarySearchTree.prototype.add = function(value) {
+    
+    // values used in insertion method
 	let node = {
 		value: value,
 		left: null,
@@ -27,22 +52,27 @@ BinarySearchTree.prototype.add = function(value) {
 		current,
 		parent;
 
-	//if there is no root node, make it your node
+    // edge case - if no items in the tree
 	if(this.root === null) {
 		this.root = node;
 	} else {
 		current = this.root;
 
 		while(true) {
-			parent = current;
+            parent = current;
+		    // if the new value is less than this node's value, go left
 			if(value < current.value) {
-				current = current.left;
+                current = current.left;
+                // if there is no left, then the new node belongs there
 				if(current === null){
 					parent.left = node;
 					break;
-				}
+                }
+            
+            // if the new value is great than this node's value, go right	
 			} else {
-				current = current.right;
+                current = current.right;
+                // if there is no right, then the new node belongs there
 				if(current === null) {
 					parent.right = node;
 					break;
@@ -53,6 +83,8 @@ BinarySearchTree.prototype.add = function(value) {
 	}
 };
 
+// traverses the tree - preorder
+// returns the tree as an array
 BinarySearchTree.prototype.toArray = function() {
 	let result = [];
 	this.traverse(function(node) {
@@ -62,38 +94,38 @@ BinarySearchTree.prototype.toArray = function() {
 	return result;
 };
 
+// traverses the tree - preorder
+// returns the tree as a string
 BinarySearchTree.prototype.toString = function() {
 	return this.toArray().toString();
-};
+}
 
 
-/** In-Order Traversal Implementation **/
+/* IN-ORDER TRAVERSAL, iterative */
 BinarySearchTree.prototype.traverse = function(process) {
-	function inOrder(node) {
-		let stack = [];
-		if(node !== null)
-			stack.push(node);
-		
-		while(stack.length > 0){
-
-			if(node.left !== null)
-				stack.push(node.left);
-
-			node = stack.pop();
-			process.call(this, node);
-
-			if(node.right !== null)
-				stack.push(node.right);
-		}
+	if(this.root === null ) { 
+		return null;
 	}
 
-	inOrder(this.root);
-};
+	let stack = new Stack();
+	let current = this.root;
+
+	while(stack.length() > 0 || current) {
+		if(current) {
+			stack.push(current);
+			current = current.left;
+		} else {
+			current = stack.pop();
+			process.call(this, current);
+			current = current.right;				
+		}
+	}
+}
 
 
-/** Test Function **/
+// test function
 function testTree() {
-	let tree = new BinarySearchTree();
+	let tree = new BinarySearchTree;
 
 	tree.add(5);
 	tree.add(10);
