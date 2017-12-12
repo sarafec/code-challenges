@@ -1,0 +1,39 @@
+Problem 1.2 - Check Permutation
+Given two strings, write a method to decide if one is a permuation of the other.
+
+Brainstorm
+Option 1 - 
+This may not be accurate. You can reduce the two strings and if they are equal, they contain the same characters.
+Performance: O(n)
+
+Option 2 - 
+Compare each characters between the strings. 
+Note, you would need a way to account for duplicates.
+Performance: O(n^2) 
+
+Option 3 - 
+Sort by ascii value and compare directly (i.e. str1.charAt(1) === str2.charAt(1)) 
+Performance: O(2n log n)
+
+Questions for Interviewer
+1 - Is permutation comparison case sensitive?
+2 - Is white space significant?
+
+Hints -
+1 - if strings have different lengths, then they cannot be permutations of each other. 
+
+Solutions
+Option 1 - 
+Sort the strings and compare the sorted versions of the strings.
+Advantages - it is clean, simple, easy to understand. 
+
+Option 2 - 
+Create a count array for ascii characters and compare the two arrays. If they are identical, return true.
+This solutions assumes that the character set is ascii. If not, the character array will need to be larger.
+
+
+Todo
+|/| 5 Minute Brainstorm
+|/| Read Solution
+|/| Code Solution
+| | Write Test Code

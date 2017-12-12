@@ -1,0 +1,21 @@
+Chapter 1 - Arrays and Strings
+
+- A hash table is a data structure that maps keys to values for highly efficient lookup.
+- Simple hash table implementation - use an array of linked lists and a hash code function. 
+- While the worst case runtime for a hash table is O(n), where n is the number of keys, we will generally assume a good implementation that keeps collisions to a minimum and has a lookup time of O(1).
+
+- An alternative to using linked lists with a hash table is to use a balanced binary search tree. This gives us a O(log n) lookup time. 
+- Advantages: takes up less space and can iterate through the keys in order.
+
+- If the language you are using doesn't have automatic resizing (i.e. Java), you'll need an array-lke data structure. You might use an ArrayList. 
+- A typical implementation of an ArrayList is that when the array is full, the array doubles in size, each doubling takes O(n) time, but happens so rarely taht its insertion time is still considered to be O(1).
+
+- For concatentating strings, if all strings are assumed to be the same length, on each concatenation a new copy of the string is created, and the two strings are copied over - character by character. 
+The first iteration requires us to copy x characters. The second iteration requires copying 2x characters. The third iteration requires us to copy 3x characters. 
+The total time is O(x + 2x + ... nx). This reduces to be O(nx^2). Because, 1 + 2 + ... + n is equal to n(n + 1)/2.
+
+- StringBuffer can create a resizeable array of all the strings, copying them back to a string when necessary. 
+
+
+- Suggestion - implement your own versions of StringBuilder, HashTable, and ArrayList
+- Additional Reading - Hash Table Collision Resolution (p. 636), Rabin-Karp Substring Seach (p. 636)

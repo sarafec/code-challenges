@@ -1,0 +1,27 @@
+Problem 1.3 - URLify
+Write a method to replace all spaces in a string with '%20'. 
+You may assume that the string has sufficient space at the end to hold the additional characters, and that you are given the 'true' length of the string.
+
+Example Input - "Mr John Smith   ", 13
+		Output - "Mr%20John%20Smith"
+
+Brainstorm
+Option 1 -
+Create a character array
+Loop through char array and overwrite indexes that === ' ' with '%20'
+Join character array as string
+Performance: O(n) running time and O(n) space complexity
+
+Hint - in string manipulation problems, a common approach is to edit the string starting from the end and working backgwards. This is useful because we have an extra buffer at the end, which allows us to change characters without worrying about what we are overwriting.
+
+Solutions
+Option 1 (optimal) - 
+We will scan the string twice. The first scan will count the number of spaces. We will triple this number to compute how many extra characters we will have in the final string.
+In the second scan, which is done in reverse order (back of string to front), we will edit the string. When we see a space, we replace it with %20. If there is no space, then we will keep the original string. 
+
+
+Todo
+|/| 5 Minute Brainstorm
+|/| Read Solution
+| | Code Solution
+| | Write Test Code

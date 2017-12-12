@@ -1,0 +1,13 @@
+Problem 1.4 - Palindrome Permuatation
+Given a string, write a function to check fi it is a permutation of a palindrome.
+A palindrome is a word or phrase that is the same forwards adn backwards.
+A permutation is a rearrangement of letters. The palindrome does not need to limited to just dictionary words.
+
+Example Input - Tact Coa
+		Output - True (permutations: "taco cat", "atco cta", etc.)
+
+Todo
+| | 5 Minute Brainstorm
+| | Read Solution
+| | Code Solution
+| | Write Test Code

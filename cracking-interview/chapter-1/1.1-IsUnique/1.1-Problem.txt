@@ -1,0 +1,35 @@
+Problem 1.1 - Is Unique
+Implement an algorithm to determine if a string has all unique characters.
+Follow up: what if you cannot use additional data structures?
+
+Brainstorm
+Option 1 - 
+Compare each letter to all other letters in the string.
+Performance: O(n^2) in the worst case
+
+
+Questions for Interviewer
+1 - Is this an ASCII string or a Unicode string? For these answers, assume ASCII. If not, increase storage size.
+
+Hints
+1 - You'll return false if the length of the string exceeds the number of unique characters in the alphabet. You cannot form a string of 280 unique characters out of a 128-character alphabet.
+
+Solutions
+Option 1 (optimal) - 
+Create an array of boolean values, where the flag at index i indicates whether character i in the alphabet is contained in the string. The second time you see this character, you can return false.
+Performance: O(n), where n is the length of the string. The space complexity is O(1). 
+
+Option 2 - 
+Compare every character of the string to every other character of the string. 
+Performance: O(n) running time and O(1) space.
+
+Option 3
+If you are able to modify the input string, you can sort the string in O(n log(n)) time and then linerly check the string for neighboring characters that are identical. 
+Be aware, some sorting algorithms take up extra space.
+
+
+Todo
+|/| 5 Minute Brainstorm
+|/| Read Solution
+|/| Code Solution
+| | Write Test Code
