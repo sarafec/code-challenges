@@ -23,5 +23,5 @@ In the second scan, which is done in reverse order (back of string to front), we
 Todo
 |/| 5 Minute Brainstorm
 |/| Read Solution
-| | Code Solution
+|/| Code Solution
 | | Write Test Code

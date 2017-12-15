@@ -1,13 +1,36 @@
 Problem 1.4 - Palindrome Permuatation
-Given a string, write a function to check fi it is a permutation of a palindrome.
-A palindrome is a word or phrase that is the same forwards adn backwards.
+Given a string, write a function to check if it is a permutation of a palindrome.
+A palindrome is a word or phrase that is the same forwards and backwards.
 A permutation is a rearrangement of letters. The palindrome does not need to limited to just dictionary words.
 
 Example Input - Tact Coa
 		Output - True (permutations: "taco cat", "atco cta", etc.)
 
+Brainstorm - 
+Option 1 - 
+An even palindrome would need duplicate letters
+An odd palindrome would need duplicate letters, except one
+Sort - if even, compare against neighbor
+	   if odd, compare against neighbor while accounting for the one lone character
+
+Hint - A lot of candidates hear a problem that asks about a permutation and assume that in order to check if A is in group B, they must know everything about B and then check if one of the items is equal to A. That is not always the case. You don't need to generate all permutations in order to check if one is a palindrome.
+
+Solutions
+Option 1 - 
+Use a hash table to count how many times a character appears. Iterate through the hash table and ensure that no more than one character has an odd count.
+Performance: O(n)
+
+Option 2 - 
+Use a hash table to count how many times a character appears, checking to see how many odd counts have appeared in order to return false immediately.
+This removes the final iteration through the hash table. It is not necessarily more efficient than option 1.
+Performance: O(n)
+
+Option 3 - 
+We only need to know if the letter count is even or odd - we don't need to know the count. We can use a single integer (as a bit vector). When we see a letter, we map it to a n integer between 0 and 26 (assuming an English alphabet). Then we toggle the bit at that value. At the end of the iteration, we check that at most one bit in the integer is set to 1. 
+Performance: O(n)
+
 Todo
-| | 5 Minute Brainstorm
-| | Read Solution
+|/| 5 Minute Brainstorm
+|/| Read Solution
 | | Code Solution
 | | Write Test Code
