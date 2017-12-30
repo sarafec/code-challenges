@@ -2,8 +2,18 @@ Problem 1.5 - One Away
 There are three types of edits that can be performed on strings - insert a character, remove a character, or replace a character.
 Given two strings, write a function to check if they are one edit (or zero edits) away. 
 
+Brainstorm - 
+Lengths must be equal or plus/minus one to be true.
+Order matters, so you cannot utilize an ascii mapp to check for differences.
+
+Solution - 
+Check lengths, compare two strings and seeing if one edit will make the two strings equal
+The oneEditReplace method has a foundDifference boolean flag.
+The oneEditInsert method takes both strings and compares the characters in the string and increments the index
+[Check solution in book for code structure]
+
 Todo
-| | 5 Minute Brainstorm
-| | Read Solution
+|/| 5 Minute Brainstorm
+|/| Read Solution
 | | Code Solution
 | | Write Test Code

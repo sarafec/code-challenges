@@ -2,8 +2,19 @@ Problem 1.7 - Rotate Matrix
 Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method  to reoteate the image by 90 degress. 
 Follow-up: can you do this in place?
 
+Brainstorm - 
+Swap indexes in place, starting from the outermost layer and working our way inwards.
+for i = 0 to n
+	temp = top[i]
+	top[i] = left[i]
+	left[i] = bottom[i]
+	bottom[i] = right[i]
+	right[i] = temp
+
+Performance - O(n^2) runnign time
+
 Todo
-| | 5 Minute Brainstorm
-| | Read Solution
+|/| 5 Minute Brainstorm
+|/| Read Solution
 | | Code Solution
 | | Write Test Code

@@ -3,8 +3,12 @@ Implement a method to perform basic string compression using the counts of repea
 For example, the string aabccccc would be a2b1c5a3. If the "compressed" string would not become smaller than the original stirng, your method should return the original string.
 You can assume the string has only uppercase and lowercase letters (a-z). 
 
+Brainstorm - 
+Check character by character. If it is the same character, incrmeent count. If it is not, push character and count to array. Reset the count.
+Running time O(p + k^2)
+
 Todo
-| | 5 Minute Brainstorm
-| | Read Solution
+|/| 5 Minute Brainstorm
+|/| Read Solution
 | | Code Solution
 | | Write Test Code

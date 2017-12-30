@@ -4,8 +4,17 @@ Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 usin
 
 Example Input - "waterbottle", "erbottlewat"
 
+Brainstorm - 
+Check length. It would need to be equal to be correct.
+
+Solution - 
+Find the rotation point. If you put the rotated strings together the whoel string will be included within the two rotated stirngs.
+
+erbottlewaterbottlewat, waterbottle
+is s2s2, s1
+
 Todo
-| | 5 Minute Brainstorm
+|/| 5 Minute Brainstorm
 | | Read Solution
 | | Code Solution
 | | Write Test Code
