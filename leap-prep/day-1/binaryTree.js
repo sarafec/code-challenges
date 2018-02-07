@@ -4,7 +4,8 @@ function BinaryTree(value, left, right) {
     this.value = value;
     this.left = left;
     this.right = right;
-}
+};
+
 BinaryTree.prototype  = {
     walk: function(func, order) {
         for (var i in order) 
@@ -36,7 +37,7 @@ BinaryTree.prototype  = {
     postorder:  function(f) {
         this.walk(f,['left','right','this'])
     }
-}
+};
 
 // convenience function for creating a binary tree
 function createBinaryTreeFromArray(ary) {
@@ -44,5 +45,5 @@ function createBinaryTreeFromArray(ary) {
     if (ary[1]) left = createBinaryTreeFromArray(ary[1]);
     if (ary[2]) right = createBinaryTreeFromArray(ary[2]);
     return new BinaryTree(ary[0], left, right);
-}
+};
  

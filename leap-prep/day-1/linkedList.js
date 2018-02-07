@@ -1,12 +1,11 @@
  // adapted from nicholas c. zakas
  
- 
- function LinkedList() {
+function LinkedList() {
      this._length = 0;
      this._head = null;
  }
  
- LinkedList.prototype = {
+LinkedList.prototype = {
      add: function(data) {
          var node = {
              data: data,

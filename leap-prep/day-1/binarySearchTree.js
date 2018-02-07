@@ -14,8 +14,6 @@ BinarySearchTree.prototype = {
                 left: null,
                 right: null 
             },
-            
-            //used to traverse the structure
             current;
     
         //edge case: no items in the tree yet
@@ -55,8 +53,8 @@ BinarySearchTree.prototype = {
 
     contains: function(value){
     
-        var found       = false,
-            current     = this._root
+        var found = false,
+            current = this._root
             
         //make sure there's a node to search
         while(!found && current){
@@ -81,9 +79,9 @@ BinarySearchTree.prototype = {
 
     remove: function(value){
     
-        var found       = false,
-            parent      = null,
-            current     = this._root,
+        var found = false,
+            parent = null,
+            current = this._root,
             childCount,
             replacement,
             replacementParent;
