@@ -1,9 +1,19 @@
-### BaseCS: Deep Dive Through a Graph - DFS Traversal
-* In DFS, we can determine whether two nodes x and y have a path between them by looking at the chidlren of the starting node and recursively determining if a path exists.
-* If you need to find the shortest path use BFS. If you need to know if there is a path use DFS.
-* DFS is like solving a maze - we'll continue to walk through the path of the maze until we reach a dead end. When we do reach a dead end , we backtrack until we find another path we haven't walked yet and repeat. Eventually, we will be able to determine if we can get out of the maze.
-* Recursion plays a big part of how DFS works.
-* There are two points to keep in mind when initiaitng a grpah traversal - we can choose any arbitrary node to start our traversal with and we want to ensure that we dont' repeat any nodes. 
-* We'll use a stack to backtrack through out graph.
-* The running time of DFS - we visit every vertex once, constant time V. We check every outgoing edge from each vertex that we visit, so it depends on the size of length of adjacency list. It is calcualted as O(V + E).
-* For a directed graph ther eare |E| edges to check. For an undirected graph there are 2|E| edges to check.
+### BaseCS: Demystifying Depth-First Search
+* Travesing a tree means that you should walk through the tree without ever repeating ourselves.
+* The order in which we visit nodes while traversing a tree is important. The order of traversal is how we classify the different traversal algorithms.
+* There are two main choices in tree traversal - breadth-first search and depth-first serach.
+* A node in a binary tree only has a reference to the node on its left and a reference to a node on its right.
+* Wheever we search through the tree we are either trying to check or update all teh nodes in the structure.
+* The steps for traversal are to reat the data of the node we're checking or updating. Check the node to the left of the node that we're currently on. Check the node to the right of the node we're currently on.
+* There are threre types of search strategies - preorder, inorder and postorder.
+* Pre order - for each node of the tree read the data of that node, then visit the left subtree and right subtree.
+* In order - for each node, visit left subtree, then read the data of that node, then visit the right subtree.
+* Post order - visit the left subtree, right subtree, and then visit and read the data of the node.
+* We'll implement these traversal strategies using recursion.
+* The time complexity of tree traversal is O(n) if we only visit nodes once.
+* With this type of recursion, the stack will continue to grow until we reach a leaf, so the amoutn of memory we need to traverse (space complexity) is O(h), where h is the height of the tree.
+* Examples of DFS - git biset or when implementing mazes. 
+
+Further reading:
+* [BFS vs DFS for Binary Tree](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
+* [Application of Depth First Search](https://www.geeksforgeeks.org/applications-of-depth-first-search/)
