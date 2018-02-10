@@ -13,8 +13,8 @@
 Chosen Questions: 
 * 2.3 Delete Middle Node
 Implement an algortihm to delete a node in the middle (not necessarily the exact middle, just not first or last) of a singly linked list, only given access to that node.
-* 2.4 Partition
+* 2.4 Partition  
 Write code to partition a linked list around a value x, such that all nodes less than x come before all nodes greater than or equal to x. If x is contained within the list, the values of x only need to be after the eleements less than x. The partion element x can appear anywhere in the right partiion - it doesn't need to appear between the left and right partitions.
-* 2.8 Loop Detection
+* 2.8 Loop Detection  
 Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop.
 A circular linked list is a corrupt linked list in which a node's next pointer points to an earlier node, as to make a loop in the linked list.

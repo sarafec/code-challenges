@@ -11,6 +11,7 @@ LinkedList.prototype = {
              data: data,
              next: null
          },
+         current;
 
          if(this._head === null) {
              this._head = node;

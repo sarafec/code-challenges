@@ -54,7 +54,7 @@
 * BFS vs. Bidirectional efficiency - if our system could only support seraching firend of friend paths in BFS search, we could likely support friend of friend of friend of friend paths. We'd be able to supprot paths that are twice as long. This is because O(k^d/2) * O(k^d/2) is O(k^d).
 
 Chosen Questions:
-* 4.2 Minimal Tree
+* 4.2 Minimal Tree  
 Given a sorted (increasing order) array with unique integer elements, write an algorithm to create a binary serach tree with minimal height.
-* 4.3 List of Depths
+* 4.3 List of Depths  
 Given a binary tree, design an algorithm which creates a linked list of all teh nodes at each depth. That is to say, if you have a tree with depth d, you will have d linked lists.
