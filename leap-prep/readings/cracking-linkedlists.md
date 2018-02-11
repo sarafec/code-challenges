@@ -1,8 +1,8 @@
 ### Cracking the Coding Interview: Linked Lists
-* A linked list represents a sequence of nodes. In a singly linked list, each node poitns to the next node in the linked list. A doubly linked list gives each node pointer to both the next node and the previous ndoe.
+* A linked list represents a sequence of nodes. In a singly linked list, each node poitns to the next node in the linked list. A doubly linked list gives each node pointer to both the next node and the previous node.
 * The benefit of a linked list is that you can add and remove items from the beginning of the list in constant time.
 * If you want to find an item in the list, you'll need to iterate through.
-* Deleting a node from a linked list - given a node n, we find th eprevious node prev and set prev.next equal to n.next. If the list is doubly linked, we must also update n.next to set n.next.prev equal to n.prev. 
+* Deleting a node from a linked list - given a node n, we find the previous node prev and set prev.next equal to n.next. If the list is doubly linked, we must also update n.next to set n.next.prev equal to n.prev. 
 * When deleting a node from a linked list, check for null pointers and update the headtail as necessary.
 * The runner (or second pointer) technique is used in many linked list problems. The runner technique means that you iterate through the linked list wiht two pointers simultaneously, with one ahead of the other. The "fast" node might be ahead by a fixed amount, or it might be hopping multiple nodes for each one node that the slow node iterates through.
 * Example of when you might use the runner technique - if you wanted to rearrange your nodes but you didn't know the midpoint or end, you could have one pointer iterate twice as fast as the second pointer. And when the first pointer reaches the end, the second pointer will be at the midpoint.
