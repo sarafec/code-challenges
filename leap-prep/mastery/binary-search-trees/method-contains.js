@@ -10,6 +10,12 @@ function BinarySearchTree() {
     this._root = null;
 }
 
+function Node(value) {
+    this.data = value;
+    this.left = null;
+    this.right = null;
+}
+
 BinarySearchTree.prototype = {
     contains: function(value){
     

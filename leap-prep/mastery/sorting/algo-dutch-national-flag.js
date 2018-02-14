@@ -1,4 +1,5 @@
 function swap(arr, i1, i2) {
+    console.log(i1, i2);
     var temp = arr[i1];
     arr[i1] = arr[i2];
     arr[i2] = temp;

@@ -2,7 +2,7 @@ function detectAndRemoveLoop( node) {
     let slow = node, 
     fast = node;
    
-    while (slow != null && fast != null && fast.next != null) {
+    while (slow !== null && fast !== null && fast.next !== null) {
         slow = slow.next;
         fast = fast.next.next;
 
@@ -29,13 +29,13 @@ function removeLoop(loop, curr) {
         /* Now start a pointer from loop_node and check if it ever
          reaches ptr2 */
         ptr2 = loop;
-        while (ptr2.next != loop && ptr2.next != ptr1) {
+        while (ptr2.next !== loop && ptr2.next !== ptr1) {
             ptr2 = ptr2.next;
         }
 
         /* If ptr2 reahced ptr1 then there is a loop. So break the
          loop */
-        if (ptr2.next == ptr1) {
+        if (ptr2.next === ptr1) {
             break;
         }
 

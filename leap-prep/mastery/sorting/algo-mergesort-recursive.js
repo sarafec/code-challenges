@@ -12,16 +12,16 @@ function mergeSort(items){
 
 function merge(left, right){
     var result  = [],
-        il      = 0,
-        ir      = 0;
+        indexL      = 0,
+        indexR      = 0;
 
-    while (il < left.length && ir < right.length){
-        if (left[il] < right[ir]){
-            result.push(left[il++]);
+    while (indexL < left.length && indexR < right.length){
+        if (left[indexL] < right[indexR]){
+            result.push(left[indexL++]);
         } else {
-            result.push(right[ir++]);
+            result.push(right[indexR++]);
         }
     }
 
-    return result.concat(left.slice(il)).concat(right.slice(ir));
+    return result.concat(left.slice(indexL)).concat(right.slice(indexR));
 };

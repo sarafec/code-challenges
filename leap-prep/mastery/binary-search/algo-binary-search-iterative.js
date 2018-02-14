@@ -1,3 +1,11 @@
+/*
+
+Explaination:
+Move the pointers around the array such that we are cutting
+half of the array at each iteration.
+
+*/
+
 function binarySearch(arr, value){
     let left = 0;
     let right = arr.length - 1;

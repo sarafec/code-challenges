@@ -1,8 +1,7 @@
 /*
 
-TODOS: 
-- Add explaination
-- Whiteboard (high priority)
+Explaination:
+
 
 */
 
@@ -10,15 +9,17 @@ function BinarySearchTree() {
     this._root = null;
 }
 
+function Node(value) {
+    this.data = value;
+    this.left = null;
+    this.right = null;
+}
+
 BinarySearchTree.prototype = {
     add: function (value){
         //create a new node
-        var node = { 
-                value: value, 
-                left: null,
-                right: null 
-            },
-            current;
+        const node = new Node(value);
+        let current;
     
         //edge case: no items in the tree yet
         if (this._root === null){
