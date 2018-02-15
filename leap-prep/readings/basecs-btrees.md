@@ -9,5 +9,5 @@
 * It is very easy for a database to read a section of a disk at a time because most B-trees have a B value (branching factor) that is equivalent to the size of a block of data. Caches are often maped to entire sections of the B-tree at a time, which means that a database could pull an entire section out at once and read whatever values it needs from without having to make tons of additional calls again and again.
 
 Further Research:
-* [Deconstruct implementation](https://www.geeksforgeeks.org/b-tree-set-1-introduction-2/)
+* [B Tree implementation](https://www.geeksforgeeks.org/b-tree-set-1-introduction-2/)
 * [An Introduciton to B-trees](https://www.youtube.com/watch?v=C_q5ccN84C8)

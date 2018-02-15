@@ -18,4 +18,4 @@
 * A right-left rotation is a combination of a right rotation followed by a left rotation.
 
 Further Research
-* [How to determine if a binary search is balanced](https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/)
+* [How to determine if a binary search tree is balanced](https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/)
