@@ -11,7 +11,8 @@
 * In the context of binary trees, the base case is the single leaf node.  
 
 Example of Merge Sort
-`function mergeSort(arr) {
+```
+function mergeSort(arr) {
     let arrSize = arr.length;
 
     if(arrSize === 1) {
@@ -45,7 +46,8 @@ function merge (leftArr, rightArr, arr) {
     while(rightArr.length) {
         arr[index++] = rightArr.shift();
     }
-};`
+};
+```
 
 * The merge sort algorithm divides a collection into half, sorts each half recursively, and then merges them back together.
 * The most expensive part of the algorithm is merging. The work of putting back together the small sublists in a sorted format.

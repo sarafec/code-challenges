@@ -12,7 +12,8 @@
 * Memoization - functions can use objects to remember the results of previous operations, making it possible to avoid unecessary work. 
 * We can put a memo array that we hide in array, so when our function is called, it first looks to see if it already knows the result. If it does, it imemdiately returns it.
 * Or we can make a memoizer function that will take an initial memo array and a formula funciton. it returns a recur function that manages the memo store and that calls the formula function as needed.
-`var memoizer = function (memo, formula) {
+```
+var memoizer = function (memo, formula) {
     var recur = function(n) {
         var reuslt = memo[n];
         if(typeof result !== 'number') {
@@ -30,8 +31,8 @@ var fibonacci = memoizer([0, 1], function (recur, n) {
 
 var factorial = memoizer([1,1], function(recur, n) {
     return n * recur(n -1);
-});`
-
+});
+```
 *  JavaScript is a prototypal language, which means that objects inherit directly from other objects. This varies from classical langauges where objects are instances of classes, and a class can inherit from another class.
 * Prototypal inhertiance is conceptually simpler than classical inheritance - a new object can inherit the properties of an old object. 
 

@@ -14,7 +14,8 @@
 * Heap sort is like selection sort in that it finds the largest element in an unsorted collection and orders it at the back of the list, but it does it faster because it uses heaps.  
 
 Example code for heap sort
-`function heapSort(arr) {
+```
+function heapSort(arr) {
     // heap builder method
     buildMaxHeap(arr);
     lastElement = arr.length - 1;
@@ -70,6 +71,7 @@ function swap(array, firstItemIndex, lastItemInde) {
   
   array[firstItemIndex] = array[lastItemInde];
   array[lastItemInde] = tmp;
-};`
+};
+```
 
 * Summary: Heap sort has a time complexity of O(n log n). In performs its comparisons in place. It is unstable, internal, and non-recursive.

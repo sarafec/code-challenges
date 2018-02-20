@@ -29,7 +29,8 @@ Example of Swap Function -
 * Do not use quicksort for mostly sorted lists.
 
 Example of Quicksort - 
-`funciton quickSort(items, leftIndex, rightIndex) {
+```
+funciton quickSort(items, leftIndex, rightIndex) {
     let pivotIndex;
 
     // we partition the arr if it has two items in it
@@ -77,7 +78,8 @@ function partition(items, left, right) {
     }
     // new pivot
     return l;
-};`
+};
+```
   
 * Summary: Quicksort has a time complexity of O(n log n) in the average case. It's operations are done in place, but requires O(log n) memory for pointers. It is an unstable sort. It sorts internally, recursively, and it is indeed a comparison sort.
 * Quick sort is great is we don't care about maintaining the order of our items, we need an algorithm that can fit all of our data to be sorted into memory, and we'll never have to deal with data that's already sorted or mostly sorted.

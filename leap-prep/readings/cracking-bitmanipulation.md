@@ -5,6 +5,7 @@
 * ~0 is a sequence of 1s, so ~0 << 2 is 1s followed by two 0s. ANDing that with another value will clear the last two bits of the value.
   
 * Bit Facts and Tricks:
+```
 x ^ 0s = x
 x ^ 1s = ~x
 x ^ x = 0
@@ -14,6 +15,7 @@ x & x = x
 x | 0s = x
 x | 1s = 1s
 x | x = x
+```
 
 * Operations occur bit-by-bit, so what happens with one bit never impacts the other bits. That means that if one of the above statements is true for a single bit, then its true for a sequence of bits.
   
@@ -26,39 +28,51 @@ x | x = x
   
 Common Bit Tasks
 * To get a bit, we can shift 1 over by i bits and perform and AND with the number. Doign that will clear all bits other than the bit at bit i. Finally, we can compare that to 0. If the new value is not 0, then bit i must have a 1. Otherwise bit i is a 0.
-`function getBit(num, i) {
+```
+function getBit(num, i) {
     return ((num & (1 << i)) != 0);
-};`
+};
+```
 
 * To set a bit, we can shift 1 over by i bits. By performnign an OR with the number, only the value at bit i will change. All other bits of the mask are zero and will not affect num.
-`function setBit(num, i) {
+```
+function setBit(num, i) {
     return num | (1 << 1);
-};`
+};
+```
 
 * To clear a bit, we get the reverse of a number and then negate it. Then, we perform and AND wit the number. This will clear the ith bit and leave the remainder unchanged.
-`function clearBit(num, i) {
+```
+function clearBit(num, i) {
     const mask = ~1( << i);
     return num & mask;
-};`
+};
+```
 
 * To clear all bits from the most significant through i (inclusive), we can create a mask with 1 at the ith bit (1 << i). Then, we subtract 1 from it, giving us a sequence of 0s followed by i 1s. We then AND our number with this mask to leave just the last i bits.
-`function clearBitsMSThroughI(num, i) {
+```
+function clearBitsMSThroughI(num, i) {
     const mask = (1 << i) - 1;
     return num & mask;
-};`
+};
+```
 
 * To clear all bis from i through 0 (inclusive), we take a sequence of all 1s (which is -1) and shift it left by i + 1 bits. This gives us a sequence of 1st (in the most signifiant bits) followed by i 0 bits.
-`function clearBitsIThrough(num, i) {
+```
+function clearBitsIThrough(num, i) {
     const mask = (-1 << (i + 1));
     return num & mask;
-};`
+};
+```
 
 * To update bits - in order to set the ith bit to the value v, we first clear the bit at poisiotn i by using a bask. Then we shift the intended value, v, left by i bits. THis will create a number with bit i equal to v and all other bis equal to 0. Finally, we OR these two numbers, updating the ith bit if v is 1 and leaving it as 0 otherwise.
-` function updateBit(num, i, isBit1) {
+```
+function updateBit(num, i, isBit1) {
     const value = isBit1 ? 1 : 0;
     const mask = ~(1 << i);
     return (num & mask) | (value << i);
-};`
+};
+```
   
 Chosen Questions:
 * 5.2 - Binary to String

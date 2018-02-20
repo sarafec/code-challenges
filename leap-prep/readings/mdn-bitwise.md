@@ -34,7 +34,7 @@ Bitwise Shift Operators
 * Flags can be flipped with the NOT operator.
 
 Example - Flags and Bitmasks
-` 
+``` 
     // suppose you have a series of flags
     // when a flag is set, it has a value 1
     // when a flag is cleared, it has a value of 0
@@ -86,10 +86,10 @@ Example - Flags and Bitmasks
 
     // flags can be flipped with the NOT operator
     flags = ~flags;
-`
+```
   
 Converting to and from binary
-`
+```
     // binary string to decimal
     var sBinString = '1011';
     var nMyNumber = parseInt(sBinString, 2);
@@ -99,10 +99,10 @@ Converting to and from binary
     var nMyNumber = 11;
     var sBinString = nMyNumber.toString(2);
     console.log(sBinString);
-`
+```
 
 Automate Mask Creation 
-`
+```
 function createMask() {
   var nMask = 0, nFlag = 0, nLen = arguments.length > 32 ? 32 : arguments.length;
   for (nFlag; nFlag < nLen; nMask |= arguments[nFlag] << nFlag++);
@@ -114,10 +114,11 @@ var mask3 = createMask(true); // 1, i.e.: 0001
 
 
 console.og(mask1);
-`
+```
 
 Array of booleans from a mask
-`function arrayFromMask(nMask) {
+```
+function arrayFromMask(nMask) {
   // nMask must be between -2147483648 and 2147483647
   if (nMask > 0x7fffffff || nMask < -0x80000000) { 
     throw new TypeError('arrayFromMask - out of range'); 
@@ -131,10 +132,11 @@ var array1 = arrayFromMask(11);
 var array2 = arrayFromMask(4);
 var array3 = arrayFromMask(1);
 
-console.log('[' + array1.join(', ') + ']');`
+console.log('[' + array1.join(', ') + ']');
+```
 
 
-Shortcut to convert decimal to binary - Number(113).toString(2);
+Shortcut to convert decimal to binary - `Number(113).toString(2);`
   
 Binary Tricks from Blog Posts
 * Use & to find out whether a number is even or odd. An odd number's first bit will always be one. We can use & and compare the number with 1. If the number is odd, the result will always be 1.

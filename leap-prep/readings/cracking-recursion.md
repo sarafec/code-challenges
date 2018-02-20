@@ -15,15 +15,18 @@
 * Dynamic programming is mostly jsut a matter of taking a recursive algorithm and finding the overlappign subproblems (that is, the repeated calls). You then cache those results for future recursive calls.
 * Example of dynamic programming - fiboanacci numbers  
 Straight recursive implementation
-`function fibonacci(i) {
+```
+function fibonacci(i) {
     if (i === 0) return 0;
     if (i === 1) return 1;
     return fibonacci(i - 1) + fibonacci(i - 2); 
-}`
+}
+```
 Running time O(2^n);  
   
 Memoized Implementation  
-`function fibonacci(n) {
+```
+function fibonacci(n) {
     return fibonacci(n, n + 1);
 }
 function fibonacci(i, memo){
@@ -33,7 +36,8 @@ function fibonacci(i, memo){
         memo[i] = fibonacci(i - 1, memo) + fibonacci(i - 2, memo);
     }
     return memo[i];
-};`  
+};
+```  
 
 Chosen Questions:
 * 8.1 Triple Step

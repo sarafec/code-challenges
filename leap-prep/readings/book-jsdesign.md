@@ -6,7 +6,8 @@
 `var newObject = {};`
 `var newObject = new Object();`
 * Although JavaScript doesn't support the concept of classes, it does support special constructor functions that work with obejcts. By prefixing a call to a constructor function with the keyword new, we can tell JavaScript we would like the function to behave like a constructor and instantiate a new object with the members defined by that function. See example below.
-`function Car(model, year, miles) {
+```
+function Car(model, year, miles) {
     this.model = model;
     this.year = year;
     this.miles = miles;
@@ -18,13 +19,15 @@
 var civic = new Car('Honda Civic', 2009, 2000);
 var mondeo = new Car('Ford Mondeo', 2010, 5000);
 console.log(civic.toString());
-console.log(mondeo.toString());`
+console.log(mondeo.toString());
+```
   
 * The above version has a few problems - it makes inheritance difficult. The functions are redefined for each of new object created using the Car constructor.
   
 * Using Constructors with prototypes - Functions in javaScript have a property called a prototype. When we call a JS constructor to create an object, all the properties of the constructor's prototype are then made available to the new object.
 * In this way, multiple Car obejcts can be created that access the same prototype. See example below.  
-`function Car(model, year, miles) {
+```
+function Car(model, year, miles) {
     this.model = model;
     this.year = year;
     this.miles = miles;
@@ -35,5 +38,5 @@ Car.prototype.toString = function() {
 var civic = new Car('Honda Civic', 2009, 20000);
 var mondeo = new Car('Ford Mondeo', 2010, 5000);
 console.log(civic.toString());
-console.log(mondeo.toString());`
-
+console.log(mondeo.toString());
+```

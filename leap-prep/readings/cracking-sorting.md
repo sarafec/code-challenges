@@ -6,7 +6,8 @@
 * Merge sort divides the array in half, sorts each of those halves, and then merges them back together. Each of those halves does the same sorting algorithm applied to it. Eventually, you are merging just two single element arrays. 
 * The merge method, in merge sort, operates by coping all the elements from the target array segment into a helper array, keeping track of where the start of the left and right halves should be. Then iterate thourgh the helper array, copying the smaller elements from each half into the array. At the end, we copy any remaining elements into the target array.
 * Merge Sort Runtime - O(n log n). The space complexity depends.
-`function mergesort(arr, helper, low, high) {
+```
+function mergesort(arr, helper, low, high) {
     if(low < high) {
         const mid = (low + high)/2;
         // sort left half
@@ -45,12 +46,14 @@ function merge(arr, helper, low, mid, high) {
     for(let i = 0; i <= remaining; i++) {
         arr[current + i] = helper[helperLeft + i];
     }
-};`
+};
+```
   
 * In quick sort, we pick a random element and parittion the array, such that all numbers that are less than the partitioning element come before all elements that are greater than it. The paritioning can be performed efficiently thorugh a series of swaps.
 * If we repeatedly partition the array (and its subarrays) around an element, the array will eventually become sorted. However, as the paritioned elemet is not guaranteed the median (or anywhere near the median), our sorting could be very slow.
 * Quick Sort Runtime - O(n log n). Worst case runtime O(n^2). Space complexity - O(log n).
-`function quickSort(arr, left, right) {
+```
+function quickSort(arr, left, right) {
     const index = partition(arr, left, right);
     // sort left half
     if (left < index - 1) {
@@ -80,7 +83,8 @@ function partition(arr, left, right) {
         }
     }
     return left;
-};`
+};
+```
   
 * Radix Sort is a sorting algorithm for integers that take advantage of the fact that integers have a finite number of bits. In radix sort, we iterate through each digit of the number, grouping numbers by each digit.
 * For example, if we have an array of integers, we might first sort by the first digit, so that all the 0s are grouped together. Then, we sort each of these grouping by the next digit. We repeat this process sorting by each subsequent digit, until the whole array is sorted.
@@ -88,7 +92,8 @@ function partition(arr, left, right) {
   
 * In binary search, we look for an element x in a sorted array by first comparing x to the midpoitn of the array. If x is less than the midpoint, then we search the left half of the array. If x is greater than the midpoint, then we search the right half of the array. We then repeat this process, treating the left and right halves as subarrays. Again, we compare x to the midpoint of this subarray and then search either its left or right side. We repeat this process until we either find x or the subarray has a size 0.
 * Binary Search Recursive Implementation
-`function binarySearchRecursive(arr, x, low, high) {
+```
+function binarySearchRecursive(arr, x, low, high) {
     if(low > high) return -1;
     const mid = (low + high) / 2;
     if (arr[mid] < x) {
@@ -116,7 +121,8 @@ function binarySearchIterative(arr, x) {
         }
     }
     return -1;
-};` 
+};
+``` 
 * You are not limited to searching with binary search. You can search for a node by leveraging a binary tree or hash table.
   
 Chosen Questions:
