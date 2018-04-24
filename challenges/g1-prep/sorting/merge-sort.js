@@ -21,7 +21,7 @@ function merge(arr, left, mid, right) {
 	// merge temp arrays back into arr[l..r]
 	i = 0; // initial index of first subarray
 	j = 0; // initial index of second subarray
-	k = l; // initial index of merged array
+	k = left; // initial index of merged array
 
 	while (i < n1 && j < n2) {
 		if (leftArray[i] <= rightArray[j]) {
@@ -50,7 +50,7 @@ function merge(arr, left, mid, right) {
 }
 
 // recursively call mergeSort until every item is a single item array
-function mergeSort(arr, left = 0, right = 0) {
+function mergeSort(arr, left = 0, right = arr.length) {
 	if (left < right) {
 		let mid = Math.floor((left + right)/2);
 
