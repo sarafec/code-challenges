@@ -4,7 +4,7 @@
 
 Explanation: This is a variation on the count the number of connected components in an undirected graph.
 Use DFS on each component. In each DFS call, a component is visited. Then, we call DFS on the next unvisited
-component. THe numebr of calls to DFS gives us the number of connected components.
+component. The number of calls to DFS gives us the number of connected components.
 
 You can also use BFS.
 
