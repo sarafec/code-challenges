@@ -24,14 +24,19 @@ function editDistance(str1, str2, m, n) {
 				matrix[i][j] = j;
 			} else if (j === 0) {
 				matrix[i][j] = i;
+			// if last characters are the same, ignore and continue for the remaining stirng
 			} else if (str1.charAt(i-1) === str2.charAt(j - 1)) {
 				matrix[i][j] = matrix[i-1][j-1];
+			// if last characters are different, consider all possibilities and find the minimum
 			} else {
-				matrix[i][j] = Math.min(matrix[i][j-1],
-								matrix[i-1][j],
-								matrix[i-1][j-1]);
+				matrix[i][j] = 1 + Math.min(matrix[i][j-1], // insert
+								matrix[i-1][j],				// remove
+								matrix[i-1][j-1]);			// replace
 			}
 		}
+		console.log(matrix)
 	}
 	return matrix[m][n];
 }
+
+editDistance("this", "thist", 4, 5);

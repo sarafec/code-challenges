@@ -23,9 +23,9 @@ function wordWrap(words, n, width) {
 
 	// calc extra space for single line
 	for (let i = 1; i <= n; i++) {
-		extras[i][j] = width - lineCose[i-1];
+		extras[i][j] = width - words[i-1];
 		for (let j = i + 1; j <= n; j++) {
-			extras[i][j] = extras[i][j-1] - lineCose[j - 1] - 1;
+			extras[i][j] = extras[i][j-1] - words[j - 1] - 1;
 		}
 	}
 

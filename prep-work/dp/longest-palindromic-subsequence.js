@@ -34,5 +34,8 @@ function lps (seq) {
 			}
 		}
 	}
+	console.log(matrix);
 	return matrix[0][size - 1];
 }
+
+lps("geeks");

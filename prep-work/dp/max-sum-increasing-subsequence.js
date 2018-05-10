@@ -8,11 +8,17 @@ function maxSum(arr, n) {
 	// compute max sum values
 	for (let i = 1; i < n; i++) {
 		for (let j = 0; j < i; j++) {
-			if (arr[i] > arr[j] && table[i] < table[j] + arr[i) {
-				table[i] = table[j] + table[i]
+			if (arr[i] > arr[j] && table[i] < table[j] + arr[i]) {
+				table[i] = table[j] + arr[i];
 			}
 		}
 	}
 	
+	console.log(Math.max(...table));
 	return Math.max(...table);
 }
+
+const arr = [1, 2, 3];
+const arrLength = arr.length;
+
+maxSum(arr, arrLength);

@@ -16,17 +16,20 @@ class Matrix {
 }
 
 function knapsack(weight, wtArr, val, n) {
-	const knapsack = new Matrix(n + 1, weight + 1).build();
+	const ks = new Matrix(n + 1, weight + 1).build();
 	for (let i = 0; i <= n; i++) {
 		for (let j = 0; j <= weight; j++) {
 			if (i === 0 || j === 0) {
-				knapsack[i][j] = 0;
-			} else if (wtArr[i-1] <= weight) {
-				knapsack[i][j] = Math.max(val[i-1] + knapsack[i-1][j - wtArr[i-1]], knapsack[i-1][j]);
+				ks[i][j] = 0;
+			} else if (wtArr[i-1] <= j) {
+				ks[i][j] = Math.max(val[i-1] + ks[i-1][j - wtArr[i-1]], ks[i-1][j]);
 			} else {
-				knapsack[i][j] = knapsack[i-1][weight];
+				ks[i][j] = ks[i-1][weight];
 			}
 		}
 	}
-	return knapsack[n][weight];
+	console.log(ks[n][weight]);
+	return ks[n][weight];
 }
+
+knapsack(35, [10, 20, 5, 15], [20, 20, 30, 15], 4);

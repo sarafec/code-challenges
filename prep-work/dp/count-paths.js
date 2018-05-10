@@ -28,5 +28,8 @@ function numberOfPaths(m,n) {
 			grid[i][j] = grid[i-1][j] + grid[i][j-1];
 		}
 	}
+	console.log(grid[m-1][n-1]);
 	return grid[m-1][n-1];
 }
+
+numberOfPaths(3,3);

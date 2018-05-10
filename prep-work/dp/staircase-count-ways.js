@@ -10,5 +10,8 @@ function countWays (num, m) {
 			result[i] += result[i-j];
 		}
 	}
+	console.log(result[num - 1]);
 	return result[num - 1];
 }
+
+countWays (4 + 1, 2);

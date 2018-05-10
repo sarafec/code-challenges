@@ -15,8 +15,8 @@ class Matrix {
 	}
 }
 
-function isSusbetSum(set, n, sum) {
-	const subset = new Matrix (n + 1, sum + 1);
+function isSubsetSum(set, n, sum) {
+	const subset = new Matrix (n + 1, sum + 1).build();
 	for (let i = 0; i <= n; i++) {
 		subset[i][0] = true;
 	}
@@ -33,5 +33,12 @@ function isSusbetSum(set, n, sum) {
 			}
 		}
 	}
+	console.log(subset[n][sum]);
 	return subset[n][sum];
 }
+
+const set = [1, 2, 3];
+const size = set.length;
+const sum = 5;
+
+isSubsetSum(set, size, sum);

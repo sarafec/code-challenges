@@ -26,8 +26,17 @@ function minCost(cost, m, n) {
 	}
 	for (let i = 1; i <= m; i++) {
 		for (let j = 1; j <= n; j++) {
-		matrix[i][j] = Math.min(matrix[i-1][j-1], matrix[i-1][j], matrix[i][j-1]) + cost[i][j];
+			matrix[i][j] = Math.min(matrix[i-1][j-1], matrix[i-1][j], matrix[i][j-1]) + cost[i][j];
 		}
 	}
+	console.log(matrix[m][n]);
 	return matrix[m][n];
 }
+
+const grid = [[1,2,3], [4,8,2], [1,5,3]];
+// todo: why doesn't it have to be minus 1
+// could I just change the conditionals?
+const rowLength = grid.length - 1;
+const colLength = grid[0].length - 1;
+
+minCost(grid, rowLength, colLength);
