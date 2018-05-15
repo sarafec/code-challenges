@@ -27,7 +27,7 @@ function maxHeapify(arr, i, n) {
 		let swap = arr[i];
 		arr[i] = arr[largest];
 		arr[largest] = swap;
-		heapify(arr, n, largest);
+		maxHeapify(arr, largest, n);
 	}
 }
 

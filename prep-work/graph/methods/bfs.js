@@ -27,9 +27,10 @@ function bfs (currVertex, adj) {
 		while(adj[currVertex].next !== null) {
 			let n = adj[currVertex].next;
 			if(!visited[n]) {
-				visisted[n] = true;
+				visited[n] = true;
 				queue.enqueue(n);
 			}
+			adj[currVertex] = n;
 		}
 	}
 }

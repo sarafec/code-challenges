@@ -1,14 +1,19 @@
 /*
 Depth first search for a graph is similar to depth first traversal of a tree. However, unlike trees, graphs may contain cycles. We may come to the same node again. To avoid processing a node more than once, we will use a boolean visited array.
 
-This implementation uses an adjacency representation for our graph.
+This implementation uses an adjacency list representation for our graph.
 
 */
 
-function dfs(v) {
-	const visited = new Array(v);
+const numVertices = 20;
+// const adj = [graph implementation]
+
+function dfs() {
+	const visited = Array(numVertices);
 	visited.fill(false);
-	dfsUtil(v, visited);
+	for (let i = 0; i < numVertices; i++) {
+		if (visited[i] === false) dfsUtil(i, visited);
+	}
 }
 
 function dfsUtil(v, visited) {
@@ -16,10 +21,11 @@ function dfsUtil(v, visited) {
 	console.log(v);
 
 	while (adj[v].next !== null) {
-		if (!visisted[adj[v]]) {
-			dfsUtil(adj[v], visited);
+		let node = adj[v].next;
+		if (!visited[node]) {
+			dfsUtil(node, visited);
 		}
-		adj[v] = adj[v].next;
+		adj[v] = node;
 	}
 }
 
