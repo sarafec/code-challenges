@@ -41,6 +41,7 @@ function isPalindromeRev(head) {
 		result = true;
 
 	if (head !== null && head.next !== null) {
+		
 		while (fastPtr !== null && fastPtr.next !== null) {
 			fastPtr = fastPtr.next.next;
 			prevOfSlowPtr = slowPtr;
@@ -66,6 +67,7 @@ function isPalindromeRev(head) {
 			prevOfSlowPtr.next = secondHalf;
 		}
 	}
+
 	return result;
 }
 
@@ -80,6 +82,7 @@ function reverse(head) {
 		prev = curr;
 		curr = next;
 	}
+
 	head = prev;
 }
 
@@ -95,8 +98,10 @@ function compareList (head1, head2) {
 			return false;
 		}
 	}
+
 	if (temp1 === null && temp2 === null) {
 		return true;
 	}
-		return false;	
+
+	return false;	
 }

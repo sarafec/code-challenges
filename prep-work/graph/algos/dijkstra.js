@@ -22,8 +22,7 @@ function dijkstra(graph, src) {
 	sptSet.fill(false);
 
 	for (let count = 0; count < V-1; count++) {
-		// pick the min distance vertex 
-// from the set not yet processed
+		// pick the min distance vertex from the set not yet processed
 		let u = minDistance(dist, sptSet);
 		sptSet[u] = true;
 	}

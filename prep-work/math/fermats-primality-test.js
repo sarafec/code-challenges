@@ -14,11 +14,11 @@ function isPrime(num, k) {
 	if (n <= 3) return true;
 	while (k > 0) {
 		// pick a random number between 2 and n-2		
-let answer = 2 + Math.floor(Math.random() % (num - 4));
+		let answer = 2 + Math.floor(Math.random() % (num - 4));
 
-// fermat's theorem
-if (Math.pow(a, num-1) !== 1) return false;
-k--;
+		// fermat's theorem
+		if (Math.pow(a, num-1) !== 1) return false;
+		k--;
 	}
 	return true;
 }

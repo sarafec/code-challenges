@@ -13,14 +13,14 @@ function dfs(v) {
 
 function dfsUtil(v, visited) {
 	visited[v] = true;
-console.log(v);
+	console.log(v);
 
-while (adj[v].next !== null) {
-	if (!visisted[adj[v]]) {
-		dfsUtil(adj[v], visited);
+	while (adj[v].next !== null) {
+		if (!visisted[adj[v]]) {
+			dfsUtil(adj[v], visited);
+		}
+		adj[v] = adj[v].next;
 	}
-	adj[v] = adj[v].next;
-}
 }
 
 

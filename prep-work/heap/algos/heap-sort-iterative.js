@@ -14,12 +14,12 @@ function heapSort(arr, n) {
 		while (index < i) {
 			index = 2 *j + 1;
 			if (arr[index] < arr[index + 1] && index < i -1) {
-index++;
-}
-if (arr[j] < arr[index] && index < i) {
-	swap(arr[j], arr[index]);
-}
-j = index;
+				index++;
+			}
+			if (arr[j] < arr[index] && index < i) {
+				swap(arr[j], arr[index]);
+			}
+			j = index;
 		}
 	}
 }

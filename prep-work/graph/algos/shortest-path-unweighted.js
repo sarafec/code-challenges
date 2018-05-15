@@ -25,15 +25,15 @@ function printShortestDistance(adj, s, dest, v) {
 	let crawl = dest;
 	path.push(crawl);
 	// todo: check - is it look at the value or contains 
-// c++ vector bracket notation
+	// c++ vector bracket notation
 	while(pred[crawl] !== -1) {
 		path.push(pred[crawl]);
 		crawl = pred[crawl];
-	};
+	}
 
 	console.log("Shortest path length is: " + dist[dest]);
 	
-	for (let i = 0; path.length - 1; i >= 0; i--) {
+	for (let i = 0; path.length - 1 && i >= 0; i--) {
 		console.log(path[i]);
 	}
 }

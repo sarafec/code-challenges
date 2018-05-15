@@ -29,7 +29,7 @@ function isBipartite(graph, src) {
 				colorArr[v] = 1 - colorArr[u];
 				queue.push(v);
 			} else if (graph[u][v] && 
-colorArr[v] === colorArr[u]) {	
+				colorArr[v] === colorArr[u]) {	
 				return false;
 			}
 		}

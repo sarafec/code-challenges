@@ -36,10 +36,12 @@ function appendToEnd(head, data) {
 		head = newNode;
 		return;
 	}
+
 	let current = head;
 	while (current.next !== null) {
 		current = current.next;
 	}
+	
 	last.next = newNode;
 	return;
 }

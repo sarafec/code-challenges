@@ -39,5 +39,6 @@ function getMid(start, last) {
 			fast = fast.next;
 		}
 	}
+	
 	return slow;
 }

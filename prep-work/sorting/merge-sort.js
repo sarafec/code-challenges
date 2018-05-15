@@ -10,7 +10,7 @@ The space complexity is O(n)
 
 function sort (arr, left, right) {
 	if (left < right) {
-		let mid = Math.floor(left + right)/2;
+		let mid = Math.floor((left + right)/2);
 		sort(arr, left, mid);
 		sort(arr, mid+ 1, right);
 

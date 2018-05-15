@@ -31,7 +31,7 @@ function kurskalMST(graph) {
 		rank.push(0);
 	}
 
-	while (e < V -1) {
+	while (e < V - 1) {
 		[u,v,w] = graph[i];
 		i += 1;
 		x = find(parent, u);

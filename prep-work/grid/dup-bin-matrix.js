@@ -14,10 +14,10 @@ We would insert the matrix in a binary trie, then if the new added row is alread
 function printDuplicateRows(matrix, m, n) {
 	let head = getNewTrieNode();
 	for (let i = 0; i < m; i++) {
-		if (!insert(head, matrix[i], n) {
-			console.log("There is a duplicate row at position: " i + 1);
-}
-}
+		if (!insert(head, matrix[i], n)) {
+			console.log("There is a duplicate row at position: " + (i + 1));
+		}
+	}
 }
 
 function insert(head, arr, n) {
@@ -35,7 +35,7 @@ function insert(head, arr, n) {
 
 	current.leaf = true;
 	return current.leaf;
-}	
+}
 
 function getNewTrieNode() {
 	let node = new Trie();

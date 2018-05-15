@@ -32,15 +32,15 @@ function longestPath(currVertex) {
 
 	while (!stack.isEmpty()) {
 		let u = stack.pop();
-if (dist[u] !== Number.MAX_SAFE_INTEGER) {
+		if (dist[u] !== Number.MAX_SAFE_INTEGER) {
 			while(dist[u].next !== null) {
 				// this part is most likely wrong
 				// does es6 iterators emulate the behavior in c++
-			if (dist[u].next.getV() < dist[u] + dist[u].getWeight()) {
-				dist[dist[u].getV()] = dist[u] + dist[u].getWeight();
+				if (dist[u].next.getV() < dist[u] + dist[u].getWeight()) {
+					dist[dist[u].getV()] = dist[u] + dist[u].getWeight();
+				}
+				dist[u] = dist[u].next;
 			}
-			dist[u] = dist[u].next;
-		}
 		}
 	}
 	for (let i = 0; i < V; i++) {

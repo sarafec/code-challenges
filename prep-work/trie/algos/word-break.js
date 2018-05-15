@@ -13,6 +13,7 @@ function wordBreak(str, root) {
 			return true;
 		}
 	}
+	
 	return false;
 }
 
@@ -20,10 +21,13 @@ function search(root, key) {
 	let pCrawl = root;
 	for (let i = 0; i < key.length; i++) {
 		let index = key.charCodeAt(i) - 'a'.charCodeAt(0);
+
 		if(!pCrawl.children[index]) {
 			return false;
 		}
+
 		pCrawl = pCrawl.children[index];
 	}
+
 	return (pCrawl !== null && pCrawl.isEndOfWord);
 }

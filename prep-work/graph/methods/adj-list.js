@@ -12,7 +12,7 @@ This representation can also be used to represent a weighted graph. The weights 
 class Graph {
 	constructor(v) {
 		this.v = v;
-		adjListArr = new LinkedList(v);
+		adjListArr = Array(v);
 		for (let i = 0; i < v; i++) {
 			adjListArr[i] = new LinkedList();
 		}

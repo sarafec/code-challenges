@@ -45,5 +45,5 @@ function moveKeyToEnd(head, key) {
 				}
 			}
 		}
-		return head;
+	return head;
 }

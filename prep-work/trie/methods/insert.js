@@ -40,8 +40,10 @@ class Trie {
 
 		for (level = 0; level < length; level++) {
 			index = key.charCodeAt(level) - 'a'.charCodeAt(0);
+			
 			if (pCrawl.children[index] === null) {
 				pCrawl.children[index] = new TrieNode();
+			
 			}
 			pCrawl = pCrawl.children[index];
 		}
@@ -53,13 +55,17 @@ class Trie {
 			length = key.length;
 			index,
 			pCrawl = this.root;
+
 		for (level = 0; level < length; level++) {
 			index = key.charCodeAt(level) - 'a'.charCodeAt(0);
+			
 			if(pCrawl.children[index] === null) {
 				return false;
 			}
+
 			pCrawl = pCrawl.children[index];
 		}
+
 		return (pCarwl !== null && pCrawl.isEndOfWord);
 	}
 }

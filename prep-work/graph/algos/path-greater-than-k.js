@@ -26,8 +26,8 @@ function pathMoreThanKUtil(adj, src, k, path) {
 		let w = adj[src].second;
 
 		if (path[v]) {
- continue;
-}
+			continue;
+		}
 
 		if (w >= k) return true;
 		path[v] = true;

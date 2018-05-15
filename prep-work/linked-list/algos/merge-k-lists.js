@@ -18,13 +18,13 @@ function mergeKLists(arr, last) {
 			j = last;
 
 		while (i < j) {
-		arr[i] = sortedMerge(arr[i], arr[j]);
+			arr[i] = sortedMerge(arr[i], arr[j]);
+			i++;
+			j--;
 
-		i++, j--;
-
-		if (i >= j) {
-			last = j;
-		}
+			if (i >= j) {
+				last = j;
+			}
 		}
 }
 }

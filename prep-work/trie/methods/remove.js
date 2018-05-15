@@ -25,9 +25,9 @@ function _deleteHelper(pNode, key, level, length) {
 			return pNode.isItFreeNode();
 		} else {
 			index = this._index(key[level]);
-			if (_deleteHelper(pNode.children[index], key, level + 1, length) {
+			if (_deleteHelper(pNode.children[index], key, level + 1, length)) {
 				pNode.children = pNode.children.splice(index);
-				return (!pNode.leafNode && pNode.isItFreeNode())
+				return (!pNode.leafNode && pNode.isItFreeNode());
 			}
 		}
 	}

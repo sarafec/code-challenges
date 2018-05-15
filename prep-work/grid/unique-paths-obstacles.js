@@ -10,10 +10,10 @@ function uniquePaths(arr) {
 	const paths = new Matrix(arr.length, arr[0].length, 0);
 	
 	// initialize top left corner
-if (arr[0][0] === 0) {
-		paths[0][0] = 1;
-	}
-	
+	if (arr[0][0] === 0) {
+			paths[0][0] = 1;
+		}
+		
 	// initialize first column in 2d matrix
 	for (let i = 1; i < arr.length; i++) {
 		if (arr[i][0] === 0) {
@@ -37,5 +37,5 @@ if (arr[0][0] === 0) {
 	}
 
 	// return bottom-right corner
-return paths[-1][-1];
+	return paths[-1][-1];
 }

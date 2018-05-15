@@ -53,6 +53,5 @@ function kadane (arr) {
 			}
 		}
 	}
-return result;
-
+	return result;
 }

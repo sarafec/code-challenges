@@ -65,8 +65,8 @@ class MinHeap {
 
 /* implementation of minHeapify */
 function minHeapify(i) {
-	let left = (2*1) + 1;
-	let right = (2*1) + 2;
+	let left = (2*i) + 1;
+	let right = (2*i) + 2;
 	let smallest = i;
 	if (left < heapSize && heapArr[left] < heapArr[i]) {
 		smallest = left;

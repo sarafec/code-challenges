@@ -12,28 +12,28 @@ The time complexity of heap sort is O(n log n).
 */
 
 function sort(arr) {
-let n = arr.length;
+	let n = arr.length;
 
-// build heap -- rearrange array
-for (let i = n /2 -1; i >= 0; i--) {
-	heapify (arr, n, i);
-}
+	// build heap -- rearrange array
+	for (let i = n /2 -1; i >= 0; i--) {
+		heapify (arr, n, i);
+	}
 
-// one by one, extract an element from heap
-for (let i = n - 1; i >= 0; i--) {
-	let temp = arr[0];
-	arr[0] = arr[i];
-	arr[i] = temp;
+	// one by one, extract an element from heap
+	for (let i = n - 1; i >= 0; i--) {
+		let temp = arr[0];
+		arr[0] = arr[i];
+		arr[i] = temp;
 
-	// call max heapify on the reduced heap
-	heapify(arr, i, 0);
-}
+		// call max heapify on the reduced heap
+		heapify(arr, i, 0);
+	}
 }
 
 function heapify(arr, n, i) {
 	let largest = i;
-	let left = 2 * i + 1;
-	let right = 2 * i + 2;
+	let left = (2 * i) + 1;
+	let right = (2 * i) + 2;
 
 	if (left < n && arr[left] > arr[largest]) {
 		largest = left;

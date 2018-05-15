@@ -20,7 +20,7 @@ path - path traversed by the robot until now
 function printAllPathsUtil(matrix, i, j, m, n, path, pi) {
 	
 	// reached the bottom of the matrix
-if (i === m - 1) {
+	if (i === m - 1) {
 		for (let k = j; k < n; k++) {
 			path[pi + k - j] = (matrix + i * n) + k;
 		}
